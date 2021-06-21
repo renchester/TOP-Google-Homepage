@@ -1,1 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 
+:root {
+  --img-diameter: 36px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0.75rem 1.4rem 0 1.4rem;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  margin: 10px;
+}
+
+.nav-links-all {
+  display: none;
+}
+
+.material-icons-round.icon-apps {
+  font-size: 22.5px;
+  margin-left: 0.4em;
+}
+
+.image-cropper {
+  height: var(--img-diameter, 50px);
+  width: var(--img-diameter, 50px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 0.7em;
+}
+
+.profile-photo {
+  object-fit: cover;
+  display: inline;
+  margin: 0 auto;
+  width: var(--img-diameter, 50px);
+  height: var(--img-diameter, 50px);
+}
+
+.google-logo-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15em auto 0;
+}
+
+.google-logo {
+  display: block;
+  margin: 1.5em auto 1.5em auto;
+}
+
+.google-search-wrapper {
+  margin: auto;
+  padding: 0 2rem 0 2rem;
+  position: relative;
+  max-width: 600px;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+.google-search-input {
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  height: 3em;
+  width: 100%;
+  padding-left: 40px;
+  align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0 auto 0 auto;
+}
+
+.google-search-input:focus {
+  outline: none;
+  box-shadow: 0px 2px 3px 1px rgb(0, 0, 0, 0.1);
+}
+
+.material-icons-round.icon-search {
+  font-size: 20px;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.4);
+  top: 14px;
+  left: 48px;
+}
+
+.material-icons.icon-close {
+  display: none;
+  font-size: 22px;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.5);
+  top: 14px;
+  right: 12px;
+}
+
+.btn-container {
+  display: flex;
+  margin: 2rem auto;
+}
+
+.btn-search {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: rgb(56, 56, 56);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  /* width: 170px; */
+  padding: 0.8em 1.2em;
+  margin: 0 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-search:hover {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 3px 1px rgb(0, 0, 0, 0.1);
+}
+
+.google-language {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+.language-links {
+  padding: 0.3rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: rgb(88, 88, 88);
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  padding: 1.15em 0 1.15em 2em;
+  border-bottom: 0.2px solid #8d8d8d65;
+}
+
+.footer-terms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-links {
+  padding-right: 1rem;
+}
+
+@media (max-width: 620px) {
+  .footer-location {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .footer-terms {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  /* .nav-bar {
+    justify-content: space-between;
+  } */
+
+  .nav-links {
+    margin-right: 5.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .nav-links-gmail {
+    display: none;
+  }
+
+  .nav-links-all {
+    display: inline;
+    color: #4285f4;
+    /* border-bottom: 2px solid #4285f4; */
+  }
+
+  .material-icons-round.icon-apps {
+    margin-right: 0.5em;
+  }
+
+  .btn--feeling-lucky {
+    display: none;
+  }
+
+  .btn-container {
+    margin: auto;
+    margin-top: 1.2rem;
+  }
+
+  .google-language {
+    margin-top: 2rem;
+  }
+
+  .google-logo {
+    max-width: 65%;
+    min-width: 200px;
+    height: auto;
+  }
+
+  .footer-links {
+    font-size: 12px;
+    align-content: space-between;
+  }
+}
